@@ -1,0 +1,6 @@
+venv/
+__pycache__/
+catalog_export.txt
+*_report_before.txt
+*_report_after.txt
+library_catalog_original.py
