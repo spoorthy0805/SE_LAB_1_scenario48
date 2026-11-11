@@ -56,7 +56,8 @@ def calculate_fine(days_overdue, calc_expr):
         """Evaluate supported arithmetic expression nodes."""
         if isinstance(node, ast.Expression):
             result = evaluate(node.body)
-        elif isinstance(node, ast.Constant) and type(node.value) in (int, float):
+        elif isinstance(node, ast.Constant) and (
+                type(node.value) in (int, float)):
             result = node.value
         elif isinstance(node, ast.Name) and node.id == "days":
             result = days_overdue
