@@ -50,3 +50,10 @@ def test_dropoff_accepted():
 
 def test_dropoff_rejected():
     assert dropoff_status(50, False, True) == "rejected"
+
+def test_heavy_standard_charge():
+    assert extra_weight_charge("bedding", 20, "standard", True) == 540
+
+
+def test_dropoff_late():
+    assert dropoff_status(45, False, False) == "late"
